@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.hamkl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+@font-face {
+  font-family: "play";
+  src: url("../public/fonts/playfair.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sym";
+  src: url("../public/fonts/sym.otf") format("truetype");
+  font-style: normal;
+}
+:root {
+  --cream: rgb(243, 240, 234);
+}
+.footer_title {
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 14px;
+  font-family: "play";
+  text-align: center;
+  padding: 15px;
+}
+@import "tailwindcss"; /* src/admin/admin.css */
+.ant-layout-header {
+  background: #fff;
+}
+
+:root {
+  --gold: #d4af37;
+  --blue: #0b2d4a;
+}
+
+.d_time {
+  font-weight: bold !important;
+  font-size: 22px !important;
+}
+
+.bulsai {
+  background-image: url("https://cf.bstatic.com/xdata/images/hotel/max1024x768/457030322.jpg?k=f7606ebce77abb70dd9e445b3e440189b10413c7c520acc10396f1bb8c897c6c&o=") !important;
+}
+
+
+
+
+.jut {
+  background-image: url("http://www.thenashvilleheat.co.uk/wp-content/uploads/2019/01/DSC_5627-400x284.jpg") !important;
+  /* height: 100vh!important; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 880px) {
+  .ant-select,
+  .ant-input {
+    width: 100% !important;
+  }
+  .dalsi {
+    line-height: 130%;
+    text-align: center;
+  }
+  .pol {
+    display: none;
+  }
+
+  .r {
+    padding: 20px 0 !important;
+  }
+  .ant-table {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .dalsi {
+    font-size: 40px !important;
+  }
+
+  .am_img {
+    width: 100% !important;
+  }
+}

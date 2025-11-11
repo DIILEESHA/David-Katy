@@ -1,0 +1,107 @@
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+import "./d.css";
+import { Link } from "react-router-dom";
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const Details = () => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const onScroll = () => {
+      const rect = element.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight * 0.75;
+      if (inView) {
+        controls.start("visible");
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    // Check on mount in case already in view
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [controls]);
+
+  return (
+    <motion.div
+      className="d"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={fadeUpVariant}
+    >
+      <div className="detail_grid">
+        {/* <motion.div className="detail_sub a" variants={fadeUpVariant}>
+          <motion.div className="couple_section" variants={fadeUpVariant}>
+            <h2 className="couple_name">Wedding Details</h2>
+          </motion.div>
+        </motion.div> */}
+
+        <motion.div
+          className="detail_sub ham"
+          variants={fadeUpVariant}
+          transition={{ delay: 0.2 }}
+        >
+          <motion.div className="ham_sub dirt" variants={fadeUpVariant}>
+            <img
+              src="https://i.imgur.com/8ygwIhd.png"
+              className="d_img"
+              alt="wedding time"
+            />
+            <h2 className="d_title">Wedding Day</h2>
+            <div className="timo">Welcome drinks at 12:00 PM</div>
+            <div className="d_time">Saturday, August 9, 2025</div>
+          </motion.div>
+
+          <motion.div
+            className="ham_sub dirts"
+            variants={fadeUpVariant}
+            transition={{ delay: 0.2 }}
+          >
+            <img
+              src="https://i.imgur.com/naGjprS.png"
+              className="d_img"
+              alt="wedding venue"
+            />
+            <h2 className="d_title">Venue</h2>
+            <div className="timo">Redlands Breaks</div>
+            <div className="d_time">
+              {/* Hazelbury Bryan, DT10 2AH */}
+              {/* <br /> */}
+              <a
+                style={{ textDecoration: "underline" }}
+                href="https://www.redlandsbreaks.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Website
+              </a>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="jk"
+          variants={fadeUpVariant}
+          transition={{ delay: 0.4 }}
+        >
+          <Link to="/Wedding-details">
+            <button className="rsvp_btn">see full details</button>
+          </Link>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default Details;
