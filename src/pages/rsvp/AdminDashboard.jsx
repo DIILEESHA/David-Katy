@@ -96,17 +96,17 @@ export default function AdminDashboard({ onSignOut }) {
     }
     // In exportExcel:
     const sheetData = filtered.map((row) => ({
-      id: row.id,
+      // id: row.id,
       fullName: row.fullName || "",
       attending: row.attending || "",
       additionalGuests: row.additionalGuests || "",
       kidsNames: row.kidsNames || "",
       allergies: row.allergies || "",
-      stayingHyattFriday: row.stayingHyattFriday ? "Friday only" : "",
-      stayingHyattSaturday: row.stayingHyattSaturday ? "Saturday only" : "",
-      stayingHyattBoth: row.stayingHyattBoth ? "Both nights" : "",
-      stayingElsewhere: row.stayingElsewhere ? "Yes" : "No",
-      drivingNeedTicket: row.drivingNeedTicket ? "Needs Ticket" : "—",
+      // stayingHyattFriday: row.stayingHyattFriday ? "Friday only" : "",
+      // stayingHyattSaturday: row.stayingHyattSaturday ? "Saturday only" : "",
+      // stayingHyattBoth: row.stayingHyattBoth ? "Both nights" : "",
+      // stayingElsewhere: row.stayingElsewhere ? "Yes" : "No",
+      // drivingNeedTicket: row.drivingNeedTicket ? "Needs Ticket" : "—",
       songRequest: row.songRequest || "",
       message: row.message || "",
       createdAt:
@@ -173,17 +173,17 @@ export default function AdminDashboard({ onSignOut }) {
       key: "allergies",
       render: (v) => v || "—",
     },
-    {
-      title: "Hotel Stay",
-      key: "hotel",
-      render: (_, r) =>
-        r.stayingHyatt ? "Hyatt" : r.stayingElsewhere ? "Other" : "—",
-    },
-    {
-      title: "Driving / Ticket",
-      key: "driving",
-      render: (_, r) => (r.drivingNeedTicket ? "Needs Ticket" : "—"),
-    },
+    // {
+    //   title: "Hotel Stay",
+    //   key: "hotel",
+    //   render: (_, r) =>
+    //     r.stayingHyatt ? "Hyatt" : r.stayingElsewhere ? "Other" : "—",
+    // },
+    // {
+    //   title: "Driving / Ticket",
+    //   key: "driving",
+    //   render: (_, r) => (r.drivingNeedTicket ? "Needs Ticket" : "—"),
+    // },
     {
       title: "Song Request",
       dataIndex: "songRequest",
@@ -204,23 +204,23 @@ export default function AdminDashboard({ onSignOut }) {
     },
   
 
-    {
-      title: "Hotel Stay",
-      key: "hotel",
-      render: (_, r) => {
-        const stays = [];
-        if (r.stayingHyattFriday) stays.push("Hyatt Friday");
-        if (r.stayingHyattSaturday) stays.push("Hyatt Saturday");
-        if (r.stayingHyattBoth) stays.push("Hyatt Both");
-        if (r.stayingElsewhere) stays.push("Other");
-        return stays.length ? stays.join(", ") : "—";
-      },
-    },
-    {
-      title: "Driving / Ticket",
-      key: "driving",
-      render: (_, r) => (r.drivingNeedTicket ? "Needs Ticket" : "—"),
-    },
+    // {
+    //   title: "Hotel Stay",
+    //   key: "hotel",
+    //   render: (_, r) => {
+    //     const stays = [];
+    //     if (r.stayingHyattFriday) stays.push("Hyatt Friday");
+    //     if (r.stayingHyattSaturday) stays.push("Hyatt Saturday");
+    //     if (r.stayingHyattBoth) stays.push("Hyatt Both");
+    //     if (r.stayingElsewhere) stays.push("Other");
+    //     return stays.length ? stays.join(", ") : "—";
+    //   },
+    // },
+    // {
+    //   title: "Driving / Ticket",
+    //   key: "driving",
+    //   render: (_, r) => (r.drivingNeedTicket ? "Needs Ticket" : "—"),
+    // },
 
 
       {
