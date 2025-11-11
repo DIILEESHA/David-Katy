@@ -146,4 +146,21 @@
   .o {
     display: none;
   }
+
+  .abo_time {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .actual {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .abo_sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

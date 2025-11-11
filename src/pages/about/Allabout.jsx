@@ -32,7 +32,7 @@ const Allabout = () => {
   }, [controls]);
 
   return (
-    <div className="h">
+    <div className="">
       <motion.div
         className="d"
         ref={ref}
