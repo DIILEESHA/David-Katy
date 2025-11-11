@@ -8,13 +8,13 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCHJ79szntSLyeKkGPhsjL6ZgX74OE6P-I",
-  authDomain: "jen4-9bc69.firebaseapp.com",
-  projectId: "jen4-9bc69",
-  storageBucket: "jen4-9bc69.firebasestorage.app",
-  messagingSenderId: "184261426540",
-  appId: "1:184261426540:web:f17923f64107cc879d4749",
-  measurementId: "G-SJ6PRHZDGN"
+  apiKey: "AIzaSyAU_X-8ZlKexISWpDpkjPVqofumYQcRDlI",
+  authDomain: "david34-5a90b.firebaseapp.com",
+  projectId: "david34-5a90b",
+  storageBucket: "david34-5a90b.firebasestorage.app",
+  messagingSenderId: "935892852821",
+  appId: "1:935892852821:web:f8bd253fe5a6c02d6cb4dc",
+  measurementId: "G-CJ6RTLHW8P"
 };
 
 // initialize firebase app

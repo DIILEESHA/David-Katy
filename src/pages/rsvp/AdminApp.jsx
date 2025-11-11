@@ -7,7 +7,7 @@ import AdminDashboard from "./AdminDashboard";
 const { Content } = Layout;
 const { Title } = Typography;
 
-const DUMMY_PASSWORD = "Jenny25"; 
+const DUMMY_PASSWORD = "david25"; 
 
 export default function AdminApp() {
   const [loggedIn, setLoggedIn] = useState(false);
